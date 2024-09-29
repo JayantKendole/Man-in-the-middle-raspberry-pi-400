@@ -1,0 +1,17 @@
+
+
+# Install required packages
+sudo apt-get update
+sudo apt-get install -y hostapd dnsmasq apache2 iptables-persistent mitmproxy
+
+# Enable IP forwarding
+echo 'net.ipv4.ip_forward=1' | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
+
+# Set up IPTables
+sudo iptables-restore < /path/to/config/iptables.rules
+
+# Set up services
+sudo systemctl start hostapd
+sudo systemctl start dnsmasq
+sudo systemctl restart apache2
