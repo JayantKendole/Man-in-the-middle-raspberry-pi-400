@@ -1,0 +1,17 @@
+# Raspberry Pi MITM Proxy Project
+
+This project sets up a Man-in-the-Middle (MITM) proxy on a Raspberry Pi using `mitmproxy`, `Apache`, `iptables`, and `hostapd` to intercept and monitor HTTP traffic on a Wi-Fi network.
+
+## Prerequisites
+
+- Raspberry Pi
+- Raspbian OS installed
+- Internet access
+
+## Features
+
+- MITM Proxy using `mitmproxy`
+- Apache web server for serving certificates
+- Hostapd for Wi-Fi access point
+- DHCP and DNS configuration
+- IPTables for traffic redirection
